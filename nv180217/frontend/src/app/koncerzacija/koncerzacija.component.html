@@ -1,0 +1,86 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a routerLink='/inbox'>Vrati se na inbox</a>
+</div>
+
+
+<br />
+{{konverzacija.naslov}}
+<Br />
+
+<table>
+    <tr>
+        <td>
+            Posiljalac
+        </td>
+        <td>
+            Vreme poruke
+        </td>
+        <td>
+            Tekst poruke
+        </td>
+    </tr>
+    <tr *ngFor='let k of konverzacija.konverzacija'>
+        <td>
+            {{k.posiljalaczaispit}}
+        </td>
+        <td>
+            {{k.vremeuformatuzaispit}}
+        </td>
+        <td>
+            {{k.text}}
+        </td>
+    </tr>
+</table>
+
+<div *ngIf='blokiran==0'>
+    <textarea name='textarea' [(ngModel)]='text'></textarea>
+    <Br />
+    <button (click)='PosaljiPoruku()'>Posalji poruku</button>
+    <Br />
+
+</div>
+
+
+<button *ngIf="blokiran==0" (click)='Blokiraj()'>Blokiraj korisnika</button>
+<button *ngIf="blokiran==1" (click)='Odblokiraj()'>Odblokiraj korisnika</button>
+<br />
+
+<div *ngIf="blokiran==0">
+    <button *ngIf="prihvatiiliposalji&&dalitrebadaimaprihvatiodbij" (click)='Prihvati()'>Prihvati ponudu</button>
+    <button *ngIf="prihvatiiliposalji&&dalitrebadaimaprihvatiodbij" (click)='Odbij()'>Odbij ponudu</button>
+</div>
+
+<div *ngIf="!prihvatiiliposalji">
+    <div *ngIf='nekretnina.prodaja'>
+        <h4>Posalji ponudu</h4>
+        Izaberite nacin placanja:
+        <select [(ngModel)]="placanje" (change)="onChange($event)">
+            <option>Gotovina</option>
+            <option>Kredit</option>
+        </select>
+        <div *ngIf='cena'>Ukupna cena: {{cena}}</div>
+        <div *ngIf='placanje=="Kredit"'>Ucesce: {{ucesce}}</div>
+        <div *ngIf='cena'>
+            <button (click)='Kupi()'>Posalji ponudu</button>
+        </div>
+
+    </div>
+
+    <div *ngIf='!nekretnina.prodaja'>
+        Od <input type="date" [(ngModel)]="datumod" name="datumod">
+        <br />
+        Do <input type="date" [(ngModel)]="datumdo" name="datumdo">
+        <Br />
+        <button (click)='Izdaj()'>Posalji ponudu</button>
+    </div>
+    {{poruka}}
+</div>
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

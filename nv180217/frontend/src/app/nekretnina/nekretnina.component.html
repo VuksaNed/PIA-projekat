@@ -1,0 +1,71 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a routerLink='/registrovankorisnik'>Vrati se na pocetnu stranu</a>
+</div>
+
+<div>
+    Ova nekretnina ima {{brojprikaza}} prikaza.
+</div>
+
+
+<div>
+    Izabrana nekretnina:
+    <br />
+    {{nekretnina.naziv}}
+    <Br />
+    <img height='250px' src='assets/{{prikaz}}'>
+    <Br />
+    {{nekretnina.grad}}, {{nekretnina.opstina}}
+    <Br />
+    Cena: {{nekretnina.cena}}
+    <Br />
+    {{nekretnina.kucaspratnost}}
+    <br />
+    {{nekretnina.tekstprodaje}}
+</div>
+
+<div *ngIf='nekretnina.prodaja'>
+    <select [(ngModel)]="placanje" (change)="onChange($event)">
+        <option>Gotovina</option>
+        <option>Kredit</option>
+    </select>
+    <div *ngIf='cena'>Ukupna cena: {{cena}}</div>
+    <div *ngIf='placanje=="Kredit"'>Ucesce: {{ucesce}}</div>
+    <div *ngIf='cena'>
+        <button (click)='Kupi()'>Kupi</button>
+    </div>
+
+</div>
+
+<div *ngIf='!nekretnina.prodaja'>
+    Od <input type="date" [(ngModel)]="datumod" name="datumod">
+    <br />
+    Do <input type="date" [(ngModel)]="datumdo" name="datumdo">
+    <Br />
+    <button (click)='Izdaj()'>Izdaj</button>
+</div>
+
+{{poruka}}
+
+
+<form>
+    <button (click)='ZelimDaKontaktiram()'>Zelim da kontaktiram</button>
+    <div *ngIf='zelimkontakt==true'>
+        <textarea name='textarea' [(ngModel)]='textarea'></textarea>
+        <Br />
+        <button (click)='PosaljiPorukuOmotac()'>Posalji poruku</button>
+        <Br/>
+        {{porukazaporuku}}
+    </div>
+    
+</form>
+
+
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

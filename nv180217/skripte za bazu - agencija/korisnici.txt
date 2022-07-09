@@ -1,0 +1,104 @@
+{
+    "_id" : ObjectId("60e3524b15926e4c242c37eb"),
+    "ime" : "Marija",
+    "prezime" : "Nedeljkovic",
+    "korisnickoime" : "marija",
+    "lozinka" : "Marija123@",
+    "slika" : "avatar.png",
+    "adresaeposte" : "maja@gmail.com",
+    "grad" : "Kraljevo",
+    "drzava" : "Srbija",
+    "tip" : "registrovankorisnik",
+    "status" : "prihvacen",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60e352e115926e4c242c37ee"),
+    "ime" : "Vukasin",
+    "prezime" : "Nedeljkovic",
+    "korisnickoime" : "vukasin",
+    "lozinka" : "Vukasin123#",
+    "slika" : "avatar2.png",
+    "adresaeposte" : "vukasin@mail.com",
+    "grad" : "Kraljevo",
+    "drzava" : "Srbija",
+    "tip" : "registrovankorisnik",
+    "status" : "neobradjen",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60e356f015926e4c242c37f0"),
+    "ime" : "Uros",
+    "prezime" : "Petrovic",
+    "korisnickoime" : "uki",
+    "lozinka" : "ukiSuzuki123!",
+    "slika" : "avatar.png",
+    "adresaeposte" : "uki@mejl.rs",
+    "grad" : "Beograd",
+    "drzava" : "Srbija",
+    "tip" : "registrovankorisnik",
+    "status" : "prihvacen",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60e44827531938903b719055"),
+    "ime" : "Nikola",
+    "prezime" : "Nikolic",
+    "korisnickoime" : "nikola",
+    "lozinka" : "Nikola123!",
+    "slika" : "avatar.png",
+    "adresaeposte" : "nikola@gmail.com",
+    "grad" : "Pancevo",
+    "drzava" : "Srbija",
+    "tip" : "admin",
+    "status" : "prihvacen",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60e44846531938903b719063"),
+    "ime" : "Nikolina",
+    "prezime" : "Nikolic",
+    "korisnickoime" : "nikolina",
+    "lozinka" : "Nikolina123!",
+    "slika" : "avatar.png",
+    "adresaeposte" : "nikolina1@gmail.com",
+    "grad" : "Novi Sad",
+    "drzava" : "Srbija",
+    "tip" : "agent",
+    "status" : "prihvacen",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60ee905f18efda3c104b20ce"),
+    "ime" : "Milos",
+    "prezime" : "Milosevic",
+    "korisnickoime" : "milos",
+    "lozinka" : "Milos123!",
+    "slika" : "avatar.png",
+    "adresaeposte" : "milos@a.b",
+    "grad" : "Zrenjanin",
+    "drzava" : "Srbija",
+    "tip" : "registrovankorisnik",
+    "status" : "prihvacen",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60ef21271f71f900941c9374"),
+    "ime" : "Milena",
+    "prezime" : "Malic",
+    "korisnickoime" : "milena",
+    "lozinka" : "Milena123!",
+    "slika" : "avatar.png",
+    "adresaeposte" : "mikica@gmail.com",
+    "grad" : "Kraljevo",
+    "drzava" : "Srbija",
+    "tip" : "registrovankorisnik",
+    "status" : "prihvacen",
+    "__v" : 0
+}

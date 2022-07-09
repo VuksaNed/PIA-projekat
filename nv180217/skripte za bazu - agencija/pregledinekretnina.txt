@@ -1,0 +1,67 @@
+{
+    "_id" : ObjectId("60eef1fb1f71f900941c9372"),
+    "id" : 1,
+    "korisnickoime" : "marija",
+    "datum" : "2021-07-14",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60eef2101f71f900941c9373"),
+    "id" : 1,
+    "korisnickoime" : "uki",
+    "datum" : "2021-07-14",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60ef23441f71f900941c9375"),
+    "id" : 1,
+    "korisnickoime" : "milena",
+    "datum" : "2021-07-14",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60ef235a1f71f900941c9376"),
+    "id" : 3,
+    "korisnickoime" : "milena",
+    "datum" : "2021-07-14",
+    "__v" : 0
+}
+
+
+{
+    "_id" : ObjectId("60ef24041f71f900941c937b"),
+    "id" : 2,
+    "korisnickoime" : "milena",
+    "datum" : "2021-07-14",
+    "__v" : 0
+}
+
+
+{
+    "_id" : ObjectId("60f01a0e59859f2a284f171c"),
+    "id" : 1,
+    "korisnickoime" : "marija",
+    "datum" : "2021-07-15",
+    "__v" : 0
+}
+
+
+{
+    "_id" : ObjectId("60f01a1d59859f2a284f171d"),
+    "id" : 2,
+    "korisnickoime" : "marija",
+    "datum" : "2021-07-15",
+    "__v" : 0
+}
+
+
+{
+    "_id" : ObjectId("60f01a8659859f2a284f1720"),
+    "id" : 2,
+    "korisnickoime" : "uki",
+    "datum" : "2021-07-15",
+    "__v" : 0
+}

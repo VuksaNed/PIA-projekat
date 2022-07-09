@@ -1,0 +1,24 @@
+{
+    "_id" : ObjectId("60f01a9059859f2a284f1721"),
+    "id" : 2,
+    "datumOd" : "2021-07-16",
+    "datumDo" : "2021-07-20",
+    "posiljalac" : "uki",
+    "cena" : 4800,
+    "status" : "prihvaceno",
+    "__v" : 0,
+    "profitagencije" : 864
+}
+
+
+{
+    "_id" : ObjectId("60f01ab359859f2a284f1724"),
+    "id" : 1,
+    "datumOd" : "",
+    "datumDo" : "",
+    "posiljalac" : "marija",
+    "cena" : 120000,
+    "status" : "dogovoreno",
+    "__v" : 0,
+    "profitagencije" : 0
+}

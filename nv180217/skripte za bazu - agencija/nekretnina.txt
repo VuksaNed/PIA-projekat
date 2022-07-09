@@ -1,0 +1,195 @@
+{
+    "_id" : ObjectId("60e82bf8c1582d03d5f8603d"),
+    "naziv" : "Prostran 3.0 stan u luksuznoj zgradi na Zvezdari",
+    "grad" : "Beograd",
+    "opstina" : "Zvezdara",
+    "ulica" : "Dimitrije Tucovica 33",
+    "kucailistan" : "stan",
+    "brojspratova" : 8,
+    "sprat" : "3",
+    "kvadratura" : 77,
+    "brojsoba" : 3,
+    "namesten" : true,
+    "galerija" : [ 
+        {
+            "slika" : "slika1.jpg"
+        }, 
+        {
+            "slika" : "slika2.jpg"
+        }, 
+        {
+            "slika" : "slika3.jpg"
+        }
+    ],
+    "prodaja" : true,
+    "cena" : 120000,
+    "vlasnik" : "uki",
+    "promovisana" : true,
+    "odobrena" : "odobrena",
+    "id" : 1
+}
+
+{
+    "_id" : ObjectId("60e85892c1582d03d5f87035"),
+    "naziv" : "Trosoban stan za izdavanje crveni krst",
+    "grad" : "Beograd",
+    "opstina" : "Vracar",
+    "ulica" : "Vojvode Petka 2",
+    "kucailistan" : "stan",
+    "brojspratova" : 8,
+    "sprat" : "1",
+    "kvadratura" : 130,
+    "brojsoba" : 4,
+    "namesten" : true,
+    "galerija" : [ 
+        {
+            "slika" : "slika4.jpg"
+        }, 
+        {
+            "slika" : "slika5.jpg"
+        }, 
+        {
+            "slika" : "slika6.jpg"
+        }
+    ],
+    "prodaja" : false,
+    "cena" : 1200,
+    "vlasnik" : "agencija",
+    "promovisana" : true,
+    "odobrena" : "odobrena",
+    "id" : 2
+}
+
+
+{
+    "_id" : ObjectId("60e85f5fc1582d03d5f872e7"),
+    "naziv" : "Garsonjera za izdavanje",
+    "grad" : "Novi sad",
+    "opstina" : "Petrovaradin",
+    "ulica" : "Djurdja brankovica 3",
+    "kucailistan" : "stan",
+    "brojspratova" : 8,
+    "sprat" : "5",
+    "kvadratura" : 28,
+    "brojsoba" : 1,
+    "namesten" : true,
+    "galerija" : [ 
+        {
+            "slika" : "slika7.jpg"
+        }, 
+        {
+            "slika" : "slika8.jpg"
+        }, 
+        {
+            "slika" : "slika9.jpg"
+        }
+    ],
+    "prodaja" : false,
+    "cena" : 210,
+    "vlasnik" : "uki",
+    "promovisana" : true,
+    "odobrena" : "odobrena",
+    "id" : 3
+}
+
+{
+    "_id" : ObjectId("60ec6008361cd75464d3cfc2"),
+    "galerija" : [ 
+        {
+            "slika" : "slika10.jpg"
+        }, 
+        {
+            "slika" : "slika11.jpg"
+        }, 
+        {
+            "slika" : "slika12.jpg"
+        }, 
+        {
+            "slika" : "slika13.jpg"
+        }
+    ],
+    "naziv" : "Ratina kuća sa placem",
+    "grad" : "Kraljevo",
+    "opstina" : "Kraljevo",
+    "ulica" : "Beranovac bb",
+    "kucailistan" : "kuca",
+    "brojspratova" : 1,
+    "sprat" : null,
+    "kvadratura" : 70,
+    "brojsoba" : 5,
+    "namesten" : true,
+    "prodaja" : true,
+    "cena" : 35000,
+    "vlasnik" : "uki",
+    "promovisana" : false,
+    "odobrena" : "cekanje",
+    "id" : 4,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60ec82341089b5163cdf6d16"),
+    "galerija" : [ 
+        {
+            "slika" : "slika14.jpg"
+        }, 
+        {
+            "slika" : "slika15.jpg"
+        }, 
+        {
+            "slika" : "slika16.jpg"
+        }, 
+        {
+            "slika" : "slika17.jpg"
+        }
+    ],
+    "naziv" : "Četvorosoban stan na prodaju",
+    "grad" : "Subotica",
+    "opstina" : "Subotica",
+    "ulica" : "Centar 1",
+    "kucailistan" : "stan",
+    "brojspratova" : 4,
+    "sprat" : 2,
+    "kvadratura" : 96,
+    "brojsoba" : 4,
+    "namesten" : true,
+    "prodaja" : true,
+    "cena" : 79000,
+    "vlasnik" : "agencija",
+    "promovisana" : false,
+    "id" : 5,
+    "odobrena" : "odobrena",
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60f01bb759859f2a284f1725"),
+    "galerija" : [ 
+        {
+            "slika" : "slika18.jpg"
+        }, 
+        {
+            "slika" : "slika19.jpg"
+        }, 
+        {
+            "slika" : "slika20.jpg"
+        }
+    ],
+    "naziv" : "Dvor 2 stan na dan",
+    "grad" : "Beograd",
+    "opstina" : "Palilula",
+    "ulica" : "Kralja Milana",
+    "kucailistan" : "stan",
+    "brojspratova" : 4,
+    "sprat" : 2,
+    "kvadratura" : 50,
+    "brojsoba" : 2,
+    "namesten" : true,
+    "prodaja" : false,
+    "cena" : 50,
+    "vlasnik" : "agencija",
+    "promovisana" : false,
+    "id" : 6,
+    "odobrena" : "odobrena",
+    "__v" : 0
+}

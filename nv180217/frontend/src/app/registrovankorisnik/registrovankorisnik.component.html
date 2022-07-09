@@ -1,0 +1,84 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a class="active" routerLink='/registrovankorisnik'>Pocetna strana</a>
+    <a routerLink='/korisniknekrenina'>Moje nekretnine</a>
+    <a routerLink='/inbox'>Inbox</a>
+    <a routerLink='/osnovnipodaci'>Azuriraj osnovne podatke</a>
+    <a routerLink='/promenalozinke'>Promeni lozinku</a>
+    <a routerLink='/pocetna'>Odjavi se</a>
+</div>
+
+<br />
+<h2>Promovisane nekretnine</h2>
+<Br />
+<tr class="tabela">
+    <td routerLink='/nekretnina/{{n.id}}' *ngFor='let n of promovisanenekretnine' class="tabela">
+        <img height='250px' src='assets/{{n.slikazaprikaz.slika}}'>
+        <Br />
+        {{n.grad}}, {{n.opstina}}
+        <Br />
+        Cena: {{n.cena}}
+        <Br />
+        {{n.kucaspratnost}}
+        <br />
+        {{n.tekstprodaje}}
+    </td>
+</tr>
+
+<h3>Pretraga</h3>
+
+<form>
+    <table>
+        <tr>
+            <td>Grad:</td>
+            <td>
+                <input type='text' name='grad' [(ngModel)]='grad'>
+            </td>
+        </tr>
+        <tr>
+            <td>Od cene:</td>
+            <td>
+                <input type='text' name='mincena' [(ngModel)]='mincena'>
+            </td>
+        </tr>
+        <tr>
+            <td>Do cene:</td>
+            <td>
+                <input type='text' name='maxcena' [(ngModel)]='maxcena'>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2'>
+                <button (click)='Pretrazi()'>Pretrazi</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<br />
+
+
+<div *ngIf='poruka'>
+    {{poruka}}
+    <tr class="tabela" *ngFor='let n of rezultatpretrage'>
+        <td class="tabela" td routerLink='/nekretnina/{{n.id}}'>
+            <img height='250px' src='assets/{{n.slikazaprikaz.slika}}'>
+            <Br />
+            {{n.grad}}, {{n.opstina}}
+            <Br />
+            Cena: {{n.cena}}
+            <Br />
+            {{n.kucaspratnost}}
+            <br />
+            {{n.tekstprodaje}}
+        </td>
+    </tr>
+</div>
+
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

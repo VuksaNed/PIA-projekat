@@ -1,0 +1,5 @@
+{
+    "_id" : ObjectId("60eece94472ee9a8f8b860c6"),
+    "prodaja" : "42",
+    "iznajmljivanje" : "18"
+}

@@ -1,0 +1,83 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a  routerLink='/pocetna'>Pocetna strana</a>
+    <a class="active" routerLink='/registracija'>Registruj se</a>
+    <a routerLink='/prijava'>Prijavi se</a>
+  </div>
+  
+<form>
+    <table>
+        <tr>
+            <td>Ime:</td>
+            <td>
+                <input type='text' name='ime' [(ngModel)]='ime'>
+            </td>
+        </tr>
+        <tr>
+            <td>Prezime:</td>
+            <td>
+                <input type='text' name='prezime' [(ngModel)]='prezime'>
+            </td>
+        </tr>
+        <tr>
+            <td>Korisnicko ime:</td>
+            <td>
+                <input type='text' name='korisnickoime' [(ngModel)]='korisnickoime'>
+            </td>
+        </tr>
+        <tr>
+            <td>Lozinka:</td>
+            <td>
+                <input type='password' name='lozinka' [(ngModel)]='lozinka'>
+            </td>
+        </tr>
+        <tr>
+            <td>Potvrdi lozinku:</td>
+            <td>
+                <input type='password' name='potvrdalozinke' [(ngModel)]='potvrdalozinke'>
+            </td>
+        </tr>
+        <tr>
+            <td>Slika:</td>
+            <td>
+                <input type='file' accept="image/*" name='slika' [(ngModel)]='slika'>
+            </td>
+        </tr>
+        <tr>
+            <td>Adresa elektronske poste:</td>
+            <td>
+                <input type='text' name='adresaeposte' [(ngModel)]='adresaeposte'>
+            </td>
+        </tr>
+        <tr>
+            <td>Grad:</td>
+            <td>
+                <input type='text' name='grad' [(ngModel)]='grad'>
+            </td>
+        </tr>
+        <tr>
+            <td>Drzava:</td>
+            <td>
+                <input type='text' name='drzava' [(ngModel)]='drzava'>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2'>
+                <button (click)='RegistrujSe()'>Registruj se</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>
+
+
+
+<simple-notifications></simple-notifications>

@@ -1,0 +1,105 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a routerLink='/admin'>Pocetna strana</a>
+    <a class="active" routerLink='/admindodajkorisnika'>Dodaj korisnika</a>
+    <a routerLink='/adinazurirajpodatke'>Azuriraj korisnika</a>
+    <a routerLink='/brisikorisnike'>Menjaj statuse korisnika</a>
+    <a routerLink='/admindodajnekretninu'>Dodaj novu nekretninu</a>
+    <a routerLink='/adminodobrinekretninu'>Nove nekretnine</a>
+    <a routerLink='/adminugovoreneprodaje'>Ugovorene prodaje</a>
+    <a routerLink='/podesiprocente'>Postavi procente agencija</a>
+    <a routerLink='/pocetna'>Odjavi se</a>
+</div>
+
+<h4>Dodaj korisnika</h4>
+
+<form>
+    <table>
+        <tr>
+            <td>Ime:</td>
+            <td>
+                <input type='text' name='ime' [(ngModel)]='ime'>
+            </td>
+        </tr>
+        <tr>
+            <td>Prezime:</td>
+            <td>
+                <input type='text' name='prezime' [(ngModel)]='prezime'>
+            </td>
+        </tr>
+        <tr>
+            <td>Korisnicko ime:</td>
+            <td>
+                <input type='text' name='korisnickoime' [(ngModel)]='korisnickoime'>
+            </td>
+        </tr>
+        <tr>
+            <td>Lozinka:</td>
+            <td>
+                <input type='text' name='lozinka' [(ngModel)]='lozinka'>
+            </td>
+        </tr>
+        <tr>
+            <td>Potvrdi lozinku:</td>
+            <td>
+                <input type='text' name='potvrdalozinke' [(ngModel)]='potvrdalozinke'>
+            </td>
+        </tr>
+        <tr>
+            <td>Slika:</td>
+            <td>
+                <input type='file' accept="image/*" name='slika' [(ngModel)]='slika'>
+            </td>
+        </tr>
+        <tr>
+            <td>Adresa elektronske poste:</td>
+            <td>
+                <input type='text' name='adresaeposte' [(ngModel)]='adresaeposte'>
+            </td>
+        </tr>
+        <tr>
+            <td>Grad:</td>
+            <td>
+                <input type='text' name='grad' [(ngModel)]='grad'>
+            </td>
+        </tr>
+        <tr>
+            <td>Drzava:</td>
+            <td>
+                <input type='text' name='drzava' [(ngModel)]='drzava'>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Tip korisnika:
+            </td>
+            <td>
+                <select name='tip' [(ngModel)]="tip">
+                    <option value="registrovankorisnik">Registrovan korisnik</option>
+                    <option value="agent">Agent</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2'>
+                <button (click)='RegistrujSe()'>Registruj korisnika</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<div *ngIf='poruka' class='greska'>
+    {{poruka}}
+</div>
+{{porukaa}}
+
+
+
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

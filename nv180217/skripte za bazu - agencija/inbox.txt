@@ -1,0 +1,65 @@
+{
+    "_id" : ObjectId("60f01a3c59859f2a284f171e"),
+    "korisnickoime1" : "marija",
+    "korisnickoime2" : "uki",
+    "id" : 1,
+    "naslov" : "Prostran 3.0 stan u luksuznoj zgradi na Zvezdari",
+    "konverzacija" : [ 
+        {
+            "_id" : "60f01a3c59859f2a284f171f",
+            "text" : "Da li zgrada ima parking",
+            "posiljalac" : "marija",
+            "vreme" : "2021-07-15T11:21:32.781Z",
+            "procitano" : true,
+            "vremeuformatuzaispit" : "15.07.2021  11:21:32  ",
+            "posiljalaczaispit" : "marija"
+        }, 
+        {
+            "text" : "Ima parking",
+            "posiljalac" : "uki",
+            "vreme" : "2021-07-15T11:22:01.474Z",
+            "procitano" : true,
+            "vremeuformatuzaispit" : "15.07.2021  11:22:01  ",
+            "posiljalaczaispit" : "uki"
+        }, 
+        {
+            "text" : "Zeleo bih da kupim ovu nekretninu",
+            "posiljalac" : "marija",
+            "vreme" : "2021-07-15T11:23:31.130Z",
+            "procitano" : true,
+            "vremeuformatuzaispit" : "15.07.2021  11:23:31  ",
+            "posiljalaczaispit" : "marija"
+        }
+    ],
+    "nekretina" : 1,
+    "__v" : 0
+}
+
+{
+    "_id" : ObjectId("60f01a9059859f2a284f1722"),
+    "korisnickoime1" : "uki",
+    "korisnickoime2" : "agencija",
+    "id" : 2,
+    "naslov" : "Trosoban stan za izdavanje crveni krst",
+    "konverzacija" : [ 
+        {
+            "_id" : "60f01a9059859f2a284f1723",
+            "text" : "Zeleo bih da iznajmim ovu nekretninu",
+            "posiljalac" : "uki",
+            "vreme" : "2021-07-15T11:22:56.077Z",
+            "procitano" : true,
+            "vremeuformatuzaispit" : "15.07.2021  11:22:56  ",
+            "posiljalaczaispit" : "uki"
+        }, 
+        {
+            "text" : "Razmotricemo vasu ponudu",
+            "posiljalac" : "agencija",
+            "vreme" : "2021-07-15T11:30:09.679Z",
+            "procitano" : false,
+            "vremeuformatuzaispit" : "15.07.2021  11:30:09  ",
+            "posiljalaczaispit" : "agencija"
+        }
+    ],
+    "nekretina" : 2,
+    "__v" : 0
+}

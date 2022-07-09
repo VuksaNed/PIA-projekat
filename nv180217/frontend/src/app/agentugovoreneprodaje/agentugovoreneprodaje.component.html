@@ -1,0 +1,51 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a routerLink='/radnik'>Pocetna strana</a>
+    <a routerLink='/agentinbox'>Inbox</a>
+    <a routerLink='/odobravanjenekretnina'>Odobri nekretnine</a>
+    <a routerLink='/agentnovanekretnina'>Dodaj novu nekretninu</a>
+    <a routerLink='/agentsvenekretnine'>Sve nekretnine</a>
+    <a routerLink='/dogovoreneponude'>Dogovorene nekretnine</a>
+    <a class="active" routerLink='/agentugovoreneprodaje'>Ugovorene prodaje</a>
+    <a routerLink='/pocetna'>Odjavi se</a>
+</div>
+
+
+<table>
+    <tr>
+        <th>
+            Naziv nekretnine
+        </th>
+        <th>
+            Vlasnik nekretnine
+        </th>
+        <th>
+            Kupac nekretnine
+        </th>
+        <th>
+            Zarada agencije
+        </th>
+    </tr>
+    <tr *ngFor='let i of ponude'>
+        <td>
+            {{i.nazivnekretnine}} 
+        </td>
+        <td>
+            {{i.vlasnik}} 
+        </td>
+        <td>
+            {{i.posiljalac}}
+        </td>
+        <td>
+            {{i.profitagencije}}
+        </td>
+    </tr>
+</table>
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

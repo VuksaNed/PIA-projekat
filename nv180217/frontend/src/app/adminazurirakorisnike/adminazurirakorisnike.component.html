@@ -1,0 +1,78 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a routerLink='/admin'>Pocetna strana</a>
+    <a routerLink='/admindodajkorisnika'>Dodaj korisnika</a>
+    <a class="active" routerLink='/adinazurirajpodatke'>Azuriraj korisnika</a>
+    <a routerLink='/brisikorisnike'>Menjaj statuse korisnika</a>
+    <a routerLink='/admindodajnekretninu'>Dodaj novu nekretninu</a>
+    <a routerLink='/adminodobrinekretninu'>Nove nekretnine</a>
+    <a routerLink='/adminugovoreneprodaje'>Ugovorene prodaje</a>
+    <a routerLink='/podesiprocente'>Postavi procente agencija</a>
+    <a routerLink='/pocetna'>Odjavi se</a>
+</div>
+
+<div>
+    Koga zelite da azurirate:
+    <select name='izabrankorisnik' [(ngModel)]='izabrankorisnik' (change)="onChange($event)">
+        <option *ngFor='let k of korisnici'>{{k.korisnickoime}}</option>
+    </select>
+</div>
+
+<div *ngIf='izabrankorisnik!=""'>
+    <form>
+        <table>
+            <tr>
+                <img height='100px' src='assets/{{korisnik.slika}}'>
+            </tr>
+            <tr>
+                <td>Ime:</td>
+                <td>
+                    <input type='text' name='ime' [(ngModel)]='ime'>
+                </td>
+            </tr>
+            <tr>
+                <td>Prezime:</td>
+                <td>
+                    <input type='text' name='prezime' [(ngModel)]='prezime'>
+                </td>
+            </tr>
+            <tr>
+                <td>Slika:</td>
+                <td>
+                    <input type='file' accept="image/*" name='slika' [(ngModel)]='slikaa'>
+                </td>
+            </tr>
+            <tr>
+                <td>Grad:</td>
+                <td>
+                    <input type='text' name='grad' [(ngModel)]='grad'>
+                </td>
+            </tr>
+            <tr>
+                <td>Drzava:</td>
+                <td>
+                    <input type='text' name='drzava' [(ngModel)]='drzava'>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='2'>
+                    <button (click)='Azuriraj()'>Azuriraj podatke</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <div *ngIf='poruka' class='greska'>
+        {{poruka}}
+    </div>
+    {{porukaa}}
+</div>
+
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

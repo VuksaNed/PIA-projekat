@@ -1,0 +1,76 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav"><div class="topnav">
+    <a routerLink='/radnik'>Pocetna strana</a>
+    <a class="active" routerLink='/agentinbox'>Inbox</a>
+    <a routerLink='/odobravanjenekretnina'>Odobri nekretnine</a>
+    <a routerLink='/agentnovanekretnina'>Dodaj novu nekretninu</a>
+    <a routerLink='/agentsvenekretnine'>Sve nekretnine</a>
+    <a routerLink='/dogovoreneponude'>Dogovorene nekretnine</a>
+    <a routerLink='/agentugovoreneprodaje'>Ugovorene prodaje</a>
+    <a routerLink='/pocetna'>Odjavi se</a>
+</div>
+</div>
+
+
+<h4>Aktivne poruke</h4>
+<table>
+    <tr>
+        <td>
+            Naslov poruke
+        </td>
+        <td>
+            Vreme poslednje primljene poruke
+        </td>
+    </tr>
+    <tr *ngFor='let i of inbox'
+    [class.neprocitana]='!i.porukaprocitana'>
+        <td routerLink='/agentkonverzacija/{{i.id}}'>
+            {{i.naslov}}
+        </td>
+        <td routerLink='/agentkonverzacija/{{i.id}}'>
+            {{i.poslednjidatum}}
+        </td>
+        <td>
+            <button (click)='Arhiviraj(i.id)'>Arhiviraj konverzaciju</button>
+        </td>
+    </tr>
+</table>
+
+<div *ngIf='prikaziarhivirane'>
+    <h4>Arhivirane poruke</h4>
+    <table>
+        <tr>
+            <td>
+                Naslov poruke
+            </td>
+            <td>
+                Vreme poslednje primljene poruke
+            </td>
+        </tr>
+        <tr *ngFor='let i of arhiviranoiblokirano'>
+            <td routerLink='/agentkonverzacija/{{i.id}}'>
+                {{i.naslov}}
+            </td>
+            <td routerLink='/agentkonverzacija/{{i.id}}'>
+                {{i.poslednjidatum}}
+            </td>
+            <td *ngIf='i.arhivirana==true'>
+                <button (click)='Odarhiviraj(i.id)'>Izbaci poruku iz arhiviranih</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div>
+    <button *ngIf='!prikaziarhivirane' (click)='PrikaziArhivu()'>Prikazi arhivirane poruke</button>
+    <button (click)='PosaljiPoruku()'>Posalji novu poruku</button>
+</div>
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

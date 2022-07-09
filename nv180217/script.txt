@@ -1,0 +1,2 @@
+npm install --save angular2-notifications
+npm install chart.js

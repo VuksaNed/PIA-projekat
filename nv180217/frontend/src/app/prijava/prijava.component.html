@@ -1,0 +1,42 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a routerLink='/pocetna'>Pocetna strana</a>
+    <a routerLink='/registracija'>Registruj se</a>
+    <a class="active" routerLink='/prijava'>Prijavi se</a>
+  </div>
+
+  <form>
+    <table>
+        <tr>
+            <td>Korisnicko ime:</td>
+            <td>
+                <input type='text' name='korisnickoime' [(ngModel)]='korisnickoime'>
+            </td>
+        </tr>
+        <tr>
+            <td>Lozinka:</td>
+            <td>
+                <input type='password' name='lozinka' [(ngModel)]='lozinka'>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2'>
+                <button (click)='PrijaviSe()'>Prijavi se</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+<div *ngIf='poruka' class='greska'>
+    {{poruka}}
+</div>
+
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

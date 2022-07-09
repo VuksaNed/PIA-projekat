@@ -1,0 +1,81 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a routerLink='/registrovankorisnik'>Pocetna strana</a>
+    <a routerLink='/korisniknekrenina'>Moje nekretnine</a>
+    <a class="active" routerLink='/inbox'>Inbox</a>
+    <a routerLink='/osnovnipodaci'>Azuriraj osnovne podatke</a>
+    <a routerLink='/promenalozinke'>Promeni lozinku</a>
+    <a routerLink='/pocetna'>Odjavi se</a>
+</div>
+
+
+<h4>Aktivne poruke</h4>
+<table>
+    <tr>
+        <td>
+            Naslov poruke
+        </td>
+        <td>
+            Vreme poslednje primljene poruke
+        </td>
+    </tr>
+    <tr *ngFor='let i of inbox' [class.neprocitana]='!i.porukaprocitana'>
+        <td routerLink='/konverzacija/{{i.id}}'>
+            {{i.naslov}}
+        </td>
+        <td routerLink='/konverzacija/{{i.id}}'>
+            {{i.poslednjidatum}}
+        </td>
+        <td>
+            <button (click)='Arhiviraj(i.id)'>Arhiviraj konverzaciju</button>
+        </td>
+    </tr>
+</table>
+
+<div *ngIf='prikaziarhivirane'>
+    <h4>Arhivirane poruke</h4>
+    <table>
+        <tr>
+            <td>
+                Naslov poruke
+            </td>
+            <td>
+                Vreme poslednje primljene poruke
+            </td>
+        </tr>
+        <tr *ngFor='let i of arhiviranoiblokirano'>
+            <td routerLink='/konverzacija/{{i.id}}'>
+                {{i.naslov}}
+            </td>
+            <td routerLink='/konverzacija/{{i.id}}'>
+                {{i.poslednjidatum}}
+            </td>
+            <td *ngIf='i.arhivirana==true'>
+                <button (click)='Odarhiviraj(i.id)'>Izbaci poruku iz arhiviranih</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div>
+    <button *ngIf='!prikaziarhivirane' (click)='PrikaziArhivu()'>Prikazi arhivirane poruke</button>
+    <Br/>
+    <div *ngIf='zelimdaposaljemporuku'>
+        <select name='Izabrananekretnina' [(ngModel)]='naslovceta'>
+            <option *ngFor='let k of nekretnine'>{{k.naziv}}</option>
+        </select>
+        <Br/>
+        <textarea name='textarea' [(ngModel)]='textarea'></textarea>
+    </div>
+    <button (click)='PosaljiPorukuu()'>Posalji novu poruku</button>
+    {{porukazaporuku}}
+</div>
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

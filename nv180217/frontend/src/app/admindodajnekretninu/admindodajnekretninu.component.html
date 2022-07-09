@@ -1,0 +1,119 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a routerLink='/admin'>Pocetna strana</a>
+    <a routerLink='/admindodajkorisnika'>Dodaj korisnika</a>
+    <a routerLink='/adinazurirajpodatke'>Azuriraj korisnika</a>
+    <a routerLink='/brisikorisnike'>Menjaj statuse korisnika</a>
+    <a class="active" routerLink='/admindodajnekretninu'>Dodaj novu nekretninu</a>
+    <a routerLink='/adminodobrinekretninu'>Nove nekretnine</a>
+    <a routerLink='/adminugovoreneprodaje'>Ugovorene prodaje</a>
+    <a routerLink='/podesiprocente'>Postavi procente agencija</a>
+    <a routerLink='/pocetna'>Odjavi se</a>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <td>Naziv:</td>
+            <td>
+                <input type='text' name='naziv' [(ngModel)]='naziv'>
+            </td>
+        </tr>
+        <tr>
+            <td>Grad:</td>
+            <td>
+                <input type='text' name='grad' [(ngModel)]='grad'>
+            </td>
+        </tr>
+        <tr>
+            <td>Opstina:</td>
+            <td>
+                <input type='text' name='opstina' [(ngModel)]='opstina'>
+            </td>
+        </tr>
+        <tr>
+            <td>Ulica:</td>
+            <td>
+                <input type='text' name='ulica' [(ngModel)]='ulica'>
+            </td>
+        </tr>
+        <tr>
+            <td>Kuca ili stan:</td>
+            <td>
+                <select name='kucailistan' [(ngModel)]='kucailistan'>
+                    <option value='stan'>Stan</option>
+                    <option value='kuca'>Kuca</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Broj spratova:</td>
+            <td>
+                <input type='text' name='brojspratova' [(ngModel)]='brojspratova'>
+            </td>
+        </tr>
+        <tr>
+            <td>Sprat:</td>
+            <td>
+                <input type='text' name='sprat' [(ngModel)]='sprat'>
+            </td>
+        </tr>
+        <tr>
+            <td>Kvadratura:</td>
+            <td>
+                <input type='text' name='kvadratura' [(ngModel)]='kvadratura'>
+            </td>
+        </tr>
+        <tr>
+            <td>Broj soba:</td>
+            <td>
+                <input type='text' name='brojsoba' [(ngModel)]='brojsoba'>
+            </td>
+        </tr>
+        <tr>
+            <td>Namesten ili nenamesten:</td>
+            <td>
+                <select name='namesten' [(ngModel)]='namesten'>
+                    <option value='true'>Namesten</option>
+                    <option value='false'>Nenamesten</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Slike i videi:</td>
+            <td>
+                <input type='file' multiple accept="image/*, video/*" name='slika' id='videoslike'>
+            </td>
+        </tr>
+        <tr>
+            <td>Prodaja ili iznajmljivanje:</td>
+            <td>
+                <select name='prodaja' [(ngModel)]='prodaja'>
+                    <option value='true'>Prodaje se</option>
+                    <option value='false'>Iznajmljuje se</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Cena:</td>
+            <td>
+                <input type='text' name='cena' [(ngModel)]='cena'>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2'>
+                <button (click)='UbaciNovuNekretninu()'>Napravi novu nekretinu</button>
+            </td>
+        </tr>
+    </table>
+    {{poruka}}
+
+</div>
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

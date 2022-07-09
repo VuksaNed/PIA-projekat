@@ -1,0 +1,66 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+
+<div class="topnav">
+    <a routerLink='/registrovankorisnik'>Pocetna strana</a>
+    <a routerLink='/korisniknekrenina'>Moje nekretnine</a>
+    <a routerLink='/inbox'>Inbox</a>
+    <a class="active" routerLink='/osnovnipodaci'>Azuriraj osnovne podatke</a>
+    <a routerLink='/promenalozinke'>Promeni lozinku</a>
+    <a routerLink='/pocetna'>Odjavi se</a>
+  </div>
+
+
+
+<form>
+    <table>
+        <tr>
+        <img height='100px' src='assets/{{korisnik.slika}}'>
+        </tr>
+        <tr>
+            <td>Ime:</td>
+            <td>
+                <input type='text' name='ime' [(ngModel)]='ime'>
+            </td>
+        </tr>
+        <tr>
+            <td>Prezime:</td>
+            <td>
+                <input type='text' name='prezime' [(ngModel)]='prezime'>
+            </td>
+        </tr>
+        <tr>
+            <td>Slika:</td>
+            <td>
+                <input type='file' accept="image/*" name='slika' [(ngModel)]='slikaa'>
+            </td>
+        </tr>
+        <tr>
+            <td>Grad:</td>
+            <td>
+                <input type='text' name='grad' [(ngModel)]='grad'>
+            </td>
+        </tr>
+        <tr>
+            <td>Drzava:</td>
+            <td>
+                <input type='text' name='drzava' [(ngModel)]='drzava'>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2'>
+                <button (click)='Azuriraj()'>Azuriraj podatke</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<div *ngIf='poruka' class='greska'>
+    {{poruka}}
+</div>
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>

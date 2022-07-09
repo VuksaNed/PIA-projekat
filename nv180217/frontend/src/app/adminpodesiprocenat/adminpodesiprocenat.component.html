@@ -1,0 +1,44 @@
+<div class="header">
+    Agencija za prodaju i izdavanje nekretnina
+</div>
+
+<div class="topnav">
+    <a routerLink='/admin'>Pocetna strana</a>
+    <a routerLink='/admindodajkorisnika'>Dodaj korisnika</a>
+    <a routerLink='/adinazurirajpodatke'>Azuriraj korisnika</a>
+    <a routerLink='/brisikorisnike'>Menjaj statuse korisnika</a>
+    <a routerLink='/admindodajnekretninu'>Dodaj novu nekretninu</a>
+    <a routerLink='/adminodobrinekretninu'>Nove nekretnine</a>
+    <a routerLink='/adminugovoreneprodaje'>Ugovorene prodaje</a>
+    <a class="active" routerLink='/podesiprocente'>Postavi procente agencija</a>
+    <a routerLink='/pocetna'>Odjavi se</a>
+</div>
+
+
+<form>
+    <table>
+        <tr>
+            <td>Procenat za prodaju:</td>
+            <td>
+                <input type='text' name='prodaja' [(ngModel)]='prodaja'>
+            </td>
+        </tr>
+        <tr>
+            <td>Procenat za izdavanje:</td>
+            <td>
+                <input type='text' name='iznajmljivanje' [(ngModel)]='iznajmljivanje'>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2'>
+                <button (click)='AzurirajProcente()'>Azuriraj procente</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+
+<footer class="footer">
+    Copyright © 2021 Vukasin Nedeljkovic
+</footer>
